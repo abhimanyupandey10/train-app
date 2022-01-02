@@ -1,0 +1,52 @@
+<table>
+
+    <tr>
+        <th>Id</th>
+        <th>Train Name</th>
+        <th>Train Number</th>
+        <th>From</th>
+        <th>To</th>
+
+      </tr>
+      
+{% for train in trains %}
+
+    <tr>
+    <td>{{train.id}}</td>
+      <td><a href="{{train.train_number}}">{{train.name}}</a></td>
+      <td>{{train.train_number}}</td>
+      <td>{{train.source}}</td>
+      <td>{{train.destination}}</td>
+    </tr>
+
+
+{% endfor %}
+<h5>Chan\
+    ge train status</h5>
+<input type="number" name="" id="" placeholder="Enter Id">
+<button type="submit">Ontime</button>
+<button type="submit">Cancelled</button>
+<button type="submit">Delayed</button>
+</table>
+
+<style>
+
+    body{
+
+        background-color: black;
+        color: white;
+        font-size: 8px;
+    }
+    table{
+        border: 2px solid yellow
+    }
+    th{
+        border: 2px solid yellow
+    }
+    td{
+        border: 2px solid yellow
+    }
+    h5{
+        font-size: 23px;
+    }
+</style>
